@@ -1,0 +1,6 @@
+<p>list-users(parent component) works!</p>
+
+<app-filter-users [channelName]="cName" [tax]="taxVal" (updatedList)="updatereceived($event);"></app-filter-users>
+
+Back to Parent 
+<h6>Data received from Child in parent(list-users) {{ users | json }} </h6>

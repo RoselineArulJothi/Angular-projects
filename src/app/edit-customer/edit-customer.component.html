@@ -1,0 +1,9 @@
+<p>edit-customer works!</p>
+
+<button type="submit" (click)="updateUser()">Update User</button><br>
+
+<div *ngIf="updatedUser" class="bg-success">User updated Successfully</div>
+
+<button type="submit" (click)="deleteUser()">Delete User</button>
+
+<div *ngIf="deletedUser" class="bg-danger">User deleted Successfully</div>

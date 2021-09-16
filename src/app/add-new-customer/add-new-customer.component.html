@@ -1,0 +1,15 @@
+<p>add-new-customer works!</p>
+<div *ngIf="userAdded" class="bg-success">User Added successfully</div>
+
+<form #addCustomerForm="ngForm" (submit)="addCustomer(addCustomerForm)">
+    <input type="text" [(ngModel)]="firstname" name="firstname" required>
+    <input type="checkbox" [(ngModel)]="terms" name="terms" required>Accept Terms and Conditions
+    <select [(ngModel)]="customerType" name="customerType" required>
+        <option value="1">Premium</option>
+        <option value="2">Standard</option>
+    </select>
+    <textarea [(ngModel)]="description" name="description" required>
+
+    </textarea>
+    <button type="submit" [disabled]="!addCustomerForm.valid">Add Customer</button>
+</form>

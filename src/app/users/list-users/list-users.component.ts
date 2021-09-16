@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+      selector: 'app-list-users',
+      templateUrl: './list-users.component.html',
+      styleUrls: ['./list-users.component.css']
+})
+export class ListUsersComponent implements OnInit {
+
+  cName: String = 'YouTube';
+  taxVal:Number=200;
+   users:any;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  updatereceived( event:any){
+      this.users=event;
+  }
+
+}
